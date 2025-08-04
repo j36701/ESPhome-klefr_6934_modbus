@@ -121,7 +121,7 @@ output:
       number: GPIO16
       inverted: true
 
-# UART-konfiguration för RS485
+# UART-config for RS485
 uart:
   id: modbus_uart
   tx_pin: GPIO22     # LilyGO TX-pin
@@ -135,16 +135,16 @@ modbus:
   id: modbus1
   uart_id: modbus_uart
 
-# Definiera Modbus Controller för KLEFR
+# Define Modbus Controller for KLEFR
 modbus_controller:
   - id: klefr
     address: 1                  # Slave ID
     modbus_id: modbus1
     update_interval: 10s
 
-# Sensorer som läser ut register
+# Sensorer for reading registers
 sensor:
-  # Total aktiv effekt (kW)
+  # Total active power (kW)
   - platform: modbus_controller
     name: "Total Active Power"
     id: TotActPow
@@ -156,7 +156,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 3
 
-  # L1 Spänning (V)
+  # L1 Voltage (V)
   - platform: modbus_controller
     name: "L1 Voltage"
     id: voltageL1
@@ -168,7 +168,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 1
 
-  # L2 Spänning (V)
+  # L2 Voltage (V)
   - platform: modbus_controller
     name: "L2 Voltage"
     id: voltageL2
@@ -180,7 +180,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 1
 
-  # L3 Spänning (V)
+  # L3 Voltage (V)
   - platform: modbus_controller
     name: "L3 Voltage"
     id: voltageL3
@@ -192,7 +192,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 1
 
-  # L1 Ström (A)
+  # L1 Current (A)
   - platform: modbus_controller
     name: "L1 Current"
     id: currentL1
@@ -204,7 +204,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L2 Ström (A)
+  # L2 Current (A)
   - platform: modbus_controller
     name: "L2 Current"
     id: currentL2
@@ -216,7 +216,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L3 Ström (A)
+  # L3 Current (A)
   - platform: modbus_controller
     name: "L3 Current"
     id: currentL3
@@ -228,7 +228,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L1 Effekt (kW)
+  # L1 Power (kW)
   - platform: modbus_controller
     name: "L1 Active Power"
     id: powL1
@@ -240,7 +240,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L2 Effekt (kW)
+  # L2 Power (kW)
   - platform: modbus_controller
     name: "L2 Active Power"
     id: powL2
@@ -252,7 +252,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L3 Effekt (kW)
+  # L3 Power (kW)
   - platform: modbus_controller
     name: "L3 Active Power"
     id: powL3
@@ -264,7 +264,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L1 Energi totalt (kWh)
+  # L1 Total Energy (kWh)
   - platform: modbus_controller
     name: "L1 Total Energy"
     id: TotEnergyL1
@@ -276,7 +276,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L2 Energi totalt (kWh)
+  # L2 Total Energy (kWh)
   - platform: modbus_controller
     name: "L2 Total Energy"
     id: TotEnergyL2
@@ -288,7 +288,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # L3 Energi totalt (kWh)
+  # L3 Total Energy (kWh)
   - platform: modbus_controller
     name: "L3 Total Energy"
     id: TotEnergyL3
@@ -300,7 +300,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 2
 
-  # Nätfrekvens (Hz)
+  # Frequency (Hz)
   - platform: modbus_controller
     name: "Grid Frequency"
     id: freq
@@ -312,7 +312,7 @@ sensor:
     modbus_controller_id: klefr
     accuracy_decimals: 3
 
-  # Total energiförbrukning (kWh)
+  # Total Energy Consumption (kWh)
   - platform: modbus_controller
     id: TotEnergy
     name: "Total Energy"
