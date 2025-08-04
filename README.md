@@ -7,3 +7,6 @@ Modbus register map is found in appndeix A3.2: https://www.iqhome.org/klefr-6934
 
 ## Lilygo ESP32 RS485 board:
 [Lilygo ESP32 CAN RS-485 IOT Engineer Control Module Development Board](https://lilygo.cc/products/t-can485?srsltid=AfmBOoqSa-o-vLbd8vIbhc3OsUZ6j8ZRqZra9HUCNUz8Hb7yXC8QIIp0)
+
+## Influx component:
+It uses the external influx component: https://github.com/kpfleming/esphome-influxdb_v2_oss
